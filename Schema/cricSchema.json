@@ -24,8 +24,8 @@
     "category": {
       "type": "object",
       "properties": {
-        "gold": {
-          "type": "boolean"
+        "playerType": {
+          "type": "string"
         },
         "batHand": {
           "type": "string"
