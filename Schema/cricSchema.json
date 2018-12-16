@@ -1,0 +1,56 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "collegeID": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    "photoID": {
+      "type": "string"
+    },
+    "category": {
+      "type": "object",
+      "properties": {
+        "gold": {
+          "type": "boolean"
+        },
+        "batHand": {
+          "type": "string"
+        },
+        "bolHand": {
+          "type": "string"
+        },
+        "bolType": {
+          "type": "string"
+        },
+        "wk": {
+          "type": "boolean"
+        },
+        "allRounder": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "required": [
+    "name",
+    "collegeID",
+    "department",
+    "year",
+    "phone",
+    "photoID"
+  ]
+}

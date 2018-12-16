@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "properties": {
+    "_id": {
+      "type": "string",
+      "minLength": 24,
+      "maxLength": 24
+    },
+    "name": {
+      "type": "string"
+    },
+    "collegeID": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    "category": {
+      "type": "object",
+      "properties": {
+        "batHand": {
+          "type": "string"
+        },
+        "bolHand": {
+          "type": "string"
+        },
+        "bolType": {
+          "type": "string"
+        },
+        "wk": {
+          "type": "bool"
+        },
+        "allRounder": {
+          "type": "bool"
+        }
+      }
+    }
+  },
+  "required": [
+    "_id",
+    "name",
+    "collegeID",
+    "department",
+    "year",
+    "phone"
+  ]
+}
