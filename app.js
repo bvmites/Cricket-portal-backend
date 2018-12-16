@@ -1,6 +1,7 @@
 let express = require('express');
 let logger = require('morgan');
 let dotenv = require('dotenv');
+let cors = require('cors');
 
 let MongoClient = require('mongodb').MongoClient;
 
@@ -13,6 +14,7 @@ const crick = require('./api/Cric/index');
 
 // const mw = require('./middleware/mw');
 
+app.use(cors());
 dotenv.config();
 
 (async() => {
