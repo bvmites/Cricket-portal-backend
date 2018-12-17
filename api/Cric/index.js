@@ -33,7 +33,7 @@ module.exports = (db) => {
     router.get('/getall', async (request, response) => {
         try{
             let res = await Cric.getAll().toArray();
-            console.log(res);
+            // console.log(res);
             response.status(200).json(res);
         }catch (e) {
             console.log(e.message);
@@ -57,6 +57,25 @@ module.exports = (db) => {
         }
     });
 
-    return router;
+    router.post('/store', async (request, response) => {
+        try {
+            const myObj = request.body;
+            let result = await Cric.store(myObj);
+            response.status(200).json({message: "updated"});
+        }catch (e) {
+            console.log(e.message);
+            response.status(500).json({message: e.message});
+        }
+    });
 
+    router.get('/store', async(request, response) => {
+        try{
+            let result = await Cric.get_store().toArray();
+            response.status(200).json(result);
+        }catch (e) {
+            console.log(e.message);
+            response.status(500).json({message: e.message});
+        }
+    });
+    return router;
 };
